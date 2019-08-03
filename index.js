@@ -31,7 +31,7 @@ http.get(url, res => {
                         var postContext = $('.article p').text()
                         //时间戳
                         var time = new Date().valueOf()
-                        //将新闻数据写入post文件中
+                        //将新闻数据写入data文件中
                         fs.writeFile(path.join(__dirname, './data/post' + time + '.txt'), postContext, function (err) {
                             if (err) return err.message
                         })
